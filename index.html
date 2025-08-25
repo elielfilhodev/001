@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercícios JavaScript</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -16,8 +16,11 @@
 <body>
     <h1>Olá Mundo!</h1>
     <p>
-        Estou livre da maldicao
+        Estou livre da maldição
     </p>
+    <div class="botao">
+        <button onclick="mostrarAlerta()">Clique me</button>
+    </div>
     <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident rem illum ab expedita soluta aperiam quos
         cupiditate, vero distinctio molestias, et voluptatem accusamus, reprehenderit ut error eaque aliquid quod quia.
@@ -25,17 +28,23 @@
     <script>
         var n1 = Number(window.prompt('Digite um numero')); // ira guardar variavel numero 1
         var n2 = Number(window.prompt('Digite outro numero')); // ira guardar variavel numero 2
-        var s = n1 + n2
+        var s = n1 + n2;
 
         window.alert(`O resultado entre ${n1} e ${n2} e ${s}`); // ira aparecer resultado da operacao
 
         var nome = String(window.prompt('Digite seu nome')); // ira guardar variavel nome digitado
         window.alert(`Ola ${nome}, e um prazer te conhecer. seu nome tem ${nome.length} letras`); // ira contar quantas letras o nome digitado tem
-        document.writeln(`<h1>O resultado de ${n1} e ${n2} e ${s}. <br>`); // document.write ou writeln ira escrever no documento HTML.
+        document.writeln(`<h1>O resultado de ${n1} + ${n2} = ${s}. <br>`); // document.write ou writeln ira escrever no documento HTML.
         document.writeln(`<h2>Ola ${nome}, tudo bem? <br>`);
         document.writeln(`<h2>O seu nome tem ${nome.length} letras <br>`);
-        document.writeln(`<h3>Seu nome em MAIUSCULO e ${nome.toLocaleUpperCase()}<br>`); // ira deixar tudo maiusculo
-        document.write(`seu nome em minusculo e ${nome.toLocaleLowerCase()} <br>`); // ira deixar tudo minusculo
+        document.writeln(`<h3>Seu nome em MAIÚSCULO é ${nome.toLocaleUpperCase()}<br>`); // ira deixar tudo maiusculo
+        document.write(`seu nome em minúsculo é ${nome.toLocaleLowerCase()} <br>`); // ira deixar tudo minusculo
+
+        function mostrarAlerta() {
+            document.writeln('Você clicou no botão');
+            console.log('você clicou no botão :)<br>');
+            document.write(`<h3>${nome} clicou no botão`);
+        }
     </script>
 </body>
 
